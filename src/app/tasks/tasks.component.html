@@ -1,0 +1,57 @@
+<!-- Main container for the task management section -->
+<div class="container mt-5">
+  <!-- Row to structure the content -->
+  <div class="row">
+    <!-- Centered content within a medium-sized column -->
+    <div class="col-lg-6 offset-lg-3">
+      <!-- Jumbotron for a visually appealing section -->
+      <div class="jumbotron jumbotron-fluid text-center">
+        <!-- Large heading for the task management section -->
+        <h1 class="display-4">Pending Tasks</h1>
+
+        <!-- Subtitle providing additional information -->
+        <p class="lead">Efficiently manage your pending tasks with ease.</p>
+      </div>
+
+      <!-- Input field for adding new tasks -->
+      <input
+        type="text"
+        [(ngModel)]="taskName"
+        (keyup.enter)="addTask()"
+        class="form-control form-control-lg"
+        placeholder="Enter the task..."
+      />
+
+      <!-- Card to display a message when no tasks are present -->
+      <div *ngIf="taskList.length === 0" class="card p-3 mt-3">
+        <!-- Subtitle indicating no tasks are present -->
+        <h6 class="text-muted text-center">No tasks to show</h6>
+      </div>
+
+      <!-- List to display tasks -->
+      <ul class="list-group mt-3">
+        <!-- Task items generated dynamically using *ngFor -->
+        <li
+          *ngFor="let task of taskList; let i = index"
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <!-- Checkbox to mark task completion -->
+          <span class="cursor" (click)="updateTask(task, i)">
+            <i
+              [class.text-success]="task.state"
+              [ngClass]="task.state ? 'far fa-check-circle' : 'far fa-circle'"
+            ></i>
+          </span>
+
+          <!-- Task name -->
+          {{ task.name }}
+
+          <!-- Button to delete a task -->
+          <span class="cursor text-danger" (click)="deleteTask(i)">
+            <i class="fas fa-trash-alt"></i>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

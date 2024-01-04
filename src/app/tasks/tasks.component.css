@@ -1,0 +1,35 @@
+/* Styles for the jumbotron */
+.jumbotron {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 2rem; /* Padding inside the jumbotron */
+    border-radius: 0.3rem; /* Slight border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  
+  /* Styles for the heading inside the jumbotron */
+  .jumbotron h1 {
+    font-size: 3.5rem; /* Larger font size for heading */
+    margin-bottom: 1rem; /* Margin at the bottom of the heading */
+  }
+  
+  /* Styles for the paragraph inside the jumbotron */
+  .jumbotron p {
+    font-size: 1.5rem; /* Font size for the paragraph */
+    color: #6c757d; /* Text color */
+  }
+  
+  /* Styles for the input */
+  input {
+    text-align: center; /* Center-align text inside the input */
+  }
+  
+  /* Styles for large form controls */
+  .form-control-lg {
+    font-size: 1.8rem; /* Larger font size for form controls */
+  }
+  
+  /* Cursor style for clickable elements */
+  .cursor {
+    cursor: pointer; /* Set cursor to pointer for clickable elements */
+  }
+  
